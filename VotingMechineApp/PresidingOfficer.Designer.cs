@@ -60,7 +60,7 @@ namespace VotingMechineApp
             this.btnStop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStop.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStop.ForeColor = System.Drawing.Color.White;
-            this.btnStop.Location = new System.Drawing.Point(52, 217);
+            this.btnStop.Location = new System.Drawing.Point(52, 192);
             this.btnStop.Name = "btnStop";
             this.btnStop.Size = new System.Drawing.Size(240, 57);
             this.btnStop.TabIndex = 1;
@@ -75,7 +75,7 @@ namespace VotingMechineApp
             this.btnFinish.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFinish.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFinish.ForeColor = System.Drawing.Color.White;
-            this.btnFinish.Location = new System.Drawing.Point(52, 372);
+            this.btnFinish.Location = new System.Drawing.Point(52, 312);
             this.btnFinish.Name = "btnFinish";
             this.btnFinish.Size = new System.Drawing.Size(240, 57);
             this.btnFinish.TabIndex = 2;
@@ -103,7 +103,7 @@ namespace VotingMechineApp
             this.btnStopSelection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStopSelection.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnStopSelection.ForeColor = System.Drawing.Color.White;
-            this.btnStopSelection.Location = new System.Drawing.Point(139, 179);
+            this.btnStopSelection.Location = new System.Drawing.Point(139, 154);
             this.btnStopSelection.Name = "btnStopSelection";
             this.btnStopSelection.Size = new System.Drawing.Size(52, 32);
             this.btnStopSelection.TabIndex = 4;
@@ -118,14 +118,14 @@ namespace VotingMechineApp
             this.panel.Controls.Add(this.btnFinish);
             this.panel.Location = new System.Drawing.Point(12, 37);
             this.panel.Name = "panel";
-            this.panel.Size = new System.Drawing.Size(340, 479);
+            this.panel.Size = new System.Drawing.Size(340, 410);
             this.panel.TabIndex = 5;
             // 
             // PresidingOfficer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(368, 528);
+            this.ClientSize = new System.Drawing.Size(368, 456);
             this.Controls.Add(this.panel);
             this.Name = "PresidingOfficer";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

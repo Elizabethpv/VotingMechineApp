@@ -60,7 +60,7 @@ namespace VotingMechineApp
                 }
 
             }
-
+            
 
         }
 
@@ -78,6 +78,7 @@ namespace VotingMechineApp
             btnSavravSelect.BackColor = Color.RoyalBlue;
             btnKhanSelect.BackColor = Color.RoyalBlue;
             btnReady.BackColor = Color.Red;
+            butnSachin.BackColor = Color.Black;
 
         }
 
@@ -94,6 +95,7 @@ namespace VotingMechineApp
             btnSachinSelect.BackColor = Color.RoyalBlue;
             btnKhanSelect.BackColor = Color.RoyalBlue;
             btnReady.BackColor = Color.Red;
+            btnSavrav.BackColor = Color.Black;
         }
 
         private void btnKhan_Click(object sender, EventArgs e)
@@ -109,16 +111,19 @@ namespace VotingMechineApp
             btnSavravSelect.BackColor = Color.RoyalBlue;
             btnSachinSelect.BackColor = Color.RoyalBlue;
             btnReady.BackColor = Color.Red;
+            btnKhan.BackColor = Color.Black;
         }
 
         public string showUser { get; set; }
 
         private void Form1_MouseLeave(object sender, EventArgs e)
         {
-            
             btnKhanSelect.BackColor = Color.RoyalBlue;
             btnSavravSelect.BackColor = Color.RoyalBlue;
             btnSachinSelect.BackColor = Color.RoyalBlue;
+            btnKhan.BackColor = Color.RoyalBlue;
+            butnSachin.BackColor = Color.RoyalBlue;
+            btnSavrav.BackColor = Color.RoyalBlue;
         }
 
         private void panelBox_MouseLeave(object sender, EventArgs e)
@@ -127,6 +132,9 @@ namespace VotingMechineApp
             btnKhanSelect.BackColor = Color.RoyalBlue;
             btnSavravSelect.BackColor = Color.RoyalBlue;
             btnSachinSelect.BackColor = Color.RoyalBlue;
+            btnKhan.BackColor = Color.RoyalBlue;
+            butnSachin.BackColor = Color.RoyalBlue;
+            btnSavrav.BackColor = Color.RoyalBlue;
         }
 
         private void butnSachin_MouseDown(object sender, MouseEventArgs e)
