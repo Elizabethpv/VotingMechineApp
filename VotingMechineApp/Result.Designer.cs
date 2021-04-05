@@ -42,7 +42,7 @@ namespace VotingMechineApp
             // 
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(46, 74);
+            this.label1.Location = new System.Drawing.Point(84, 139);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(842, 273);
@@ -54,7 +54,7 @@ namespace VotingMechineApp
             // 
             this.lblCountSachin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblCountSachin.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCountSachin.Location = new System.Drawing.Point(460, 153);
+            this.lblCountSachin.Location = new System.Drawing.Point(498, 218);
             this.lblCountSachin.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCountSachin.Name = "lblCountSachin";
             this.lblCountSachin.Size = new System.Drawing.Size(428, 64);
@@ -65,7 +65,7 @@ namespace VotingMechineApp
             // 
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(46, 153);
+            this.label3.Location = new System.Drawing.Point(84, 218);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(413, 64);
@@ -77,7 +77,7 @@ namespace VotingMechineApp
             // 
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(46, 218);
+            this.label4.Location = new System.Drawing.Point(84, 283);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(413, 64);
@@ -89,7 +89,7 @@ namespace VotingMechineApp
             // 
             this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(46, 283);
+            this.label5.Location = new System.Drawing.Point(84, 348);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(413, 64);
@@ -101,7 +101,7 @@ namespace VotingMechineApp
             // 
             this.lblCountSavrav.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblCountSavrav.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCountSavrav.Location = new System.Drawing.Point(460, 218);
+            this.lblCountSavrav.Location = new System.Drawing.Point(498, 283);
             this.lblCountSavrav.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCountSavrav.Name = "lblCountSavrav";
             this.lblCountSavrav.Size = new System.Drawing.Size(428, 64);
@@ -112,7 +112,7 @@ namespace VotingMechineApp
             // 
             this.lblCountKhan.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.lblCountKhan.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCountKhan.Location = new System.Drawing.Point(460, 283);
+            this.lblCountKhan.Location = new System.Drawing.Point(498, 348);
             this.lblCountKhan.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCountKhan.Name = "lblCountKhan";
             this.lblCountKhan.Size = new System.Drawing.Size(428, 64);
@@ -123,7 +123,7 @@ namespace VotingMechineApp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(970, 402);
+            this.ClientSize = new System.Drawing.Size(1020, 547);
             this.Controls.Add(this.lblCountKhan);
             this.Controls.Add(this.lblCountSavrav);
             this.Controls.Add(this.label5);
@@ -132,6 +132,7 @@ namespace VotingMechineApp
             this.Controls.Add(this.lblCountSachin);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Result";
             this.Text = "Result";

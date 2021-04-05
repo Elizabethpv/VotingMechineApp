@@ -41,7 +41,6 @@ namespace VotingMechineApp
 
             PresidingOfficer po = new PresidingOfficer();
             po.Show();
-
             SqlConnection connect = new SqlConnection(Connection);
             connect.Open();
             SqlCommand cmd = new SqlCommand("VotingMechineSystem", connect);
@@ -53,18 +52,16 @@ namespace VotingMechineApp
             {
                 status = ds.Tables[0].Rows[0]["VotingState"].ToString();
 
-
-                if (status == "VoterReady")
-                {
-                    btnReady.BackColor = Color.Green;
-                }
-                else
+                if (status == "Stop")
                 {
                     btnReady.BackColor = Color.Red;
-                   
+                    panelBox.Enabled = false;
+
                 }
 
             }
+
+
         }
 
 
@@ -112,6 +109,88 @@ namespace VotingMechineApp
             btnSavravSelect.BackColor = Color.RoyalBlue;
             btnSachinSelect.BackColor = Color.RoyalBlue;
             btnReady.BackColor = Color.Red;
+        }
+
+        public string showUser { get; set; }
+
+        private void Form1_MouseLeave(object sender, EventArgs e)
+        {
+            
+            btnKhanSelect.BackColor = Color.RoyalBlue;
+            btnSavravSelect.BackColor = Color.RoyalBlue;
+            btnSachinSelect.BackColor = Color.RoyalBlue;
+        }
+
+        private void panelBox_MouseLeave(object sender, EventArgs e)
+        {
+            
+            btnKhanSelect.BackColor = Color.RoyalBlue;
+            btnSavravSelect.BackColor = Color.RoyalBlue;
+            btnSachinSelect.BackColor = Color.RoyalBlue;
+        }
+
+        private void butnSachin_MouseDown(object sender, MouseEventArgs e)
+        {
+           
+            //btnSavrav.BackColor = Color.RoyalBlue;
+            //butnSachin.BackColor = Color.Black;
+            //btnKhan.BackColor = Color.RoyalBlue;
+        }
+
+        private void btnSavrav_MouseDown(object sender, MouseEventArgs e)
+        {
+            //btnSavrav.BackColor = Color.Black;
+            //butnSachin.BackColor = Color.RoyalBlue;
+            //btnKhan.BackColor = Color.RoyalBlue;
+
+        }
+
+        private void btnKhan_MouseDown(object sender, MouseEventArgs e)
+        {
+            //btnKhan.BackColor = Color.Black;
+            //btnSavrav.BackColor = Color.RoyalBlue;
+            //butnSachin.BackColor = Color.RoyalBlue;
+        }
+
+        private void butnSachin_MouseUp(object sender, MouseEventArgs e)
+        {        
+        }
+
+        private void btnSavrav_MouseUp(object sender, MouseEventArgs e)
+        {  
+        }
+
+        private void btnKhan_MouseUp(object sender, MouseEventArgs e)
+        {         
+        }
+
+        private void Form1_Click(object sender, EventArgs e)
+        {
+            SqlConnection connect = new SqlConnection(Connection);
+            connect.Open();
+            SqlCommand cmd = new SqlCommand("VotingMechineSystem", connect);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            String status;
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                status = ds.Tables[0].Rows[0]["VotingState"].ToString();
+
+
+                if (status == "VoterReady")
+                {
+                    btnReady.BackColor = Color.Green;
+                    panelBox.Enabled = true;
+                }
+                if (status == "Stop")
+                {
+                    btnReady.BackColor = Color.Red;
+                    panelBox.Enabled = false;
+
+                }
+
+            }
         }
     }
 }

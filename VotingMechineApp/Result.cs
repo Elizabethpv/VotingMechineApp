@@ -20,6 +20,7 @@ namespace VotingMechineApp
         String Connection = DatabaseConnection.Connection;
         private void Result_Load(object sender, EventArgs e)
         {
+            
             SqlConnection connect = new SqlConnection(Connection);
             connect.Open();
             SqlCommand command = new SqlCommand("VotingMechineSystem", connect);
@@ -29,7 +30,7 @@ namespace VotingMechineApp
             lblCountSachin.Text= reader["SachinCount"].ToString();
             lblCountSavrav.Text = reader["SavravCount"].ToString();
             lblCountKhan.Text = reader["KhanCount"].ToString();
-            command.ExecuteNonQuery();
+           
             connect.Close();
         }
     }

@@ -40,6 +40,8 @@ namespace VotingMechineApp
             this.btnKhanSelect = new System.Windows.Forms.Button();
             this.btnReady = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.panelBox = new System.Windows.Forms.Panel();
+            this.panelBox.SuspendLayout();
             this.SuspendLayout();
             // 
             // butnSachin
@@ -47,40 +49,47 @@ namespace VotingMechineApp
             this.butnSachin.BackColor = System.Drawing.Color.RoyalBlue;
             this.butnSachin.FlatAppearance.BorderSize = 0;
             this.butnSachin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butnSachin.Location = new System.Drawing.Point(287, 152);
+            this.butnSachin.Location = new System.Drawing.Point(273, 74);
             this.butnSachin.Name = "butnSachin";
             this.butnSachin.Size = new System.Drawing.Size(120, 54);
             this.butnSachin.TabIndex = 0;
             this.butnSachin.UseVisualStyleBackColor = false;
             this.butnSachin.Click += new System.EventHandler(this.butnSachin_Click);
+            this.butnSachin.MouseDown += new System.Windows.Forms.MouseEventHandler(this.butnSachin_MouseDown);
+            this.butnSachin.MouseUp += new System.Windows.Forms.MouseEventHandler(this.butnSachin_MouseUp);
             // 
             // btnSavrav
             // 
             this.btnSavrav.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnSavrav.FlatAppearance.BorderSize = 0;
             this.btnSavrav.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSavrav.Location = new System.Drawing.Point(287, 253);
+            this.btnSavrav.Location = new System.Drawing.Point(273, 175);
             this.btnSavrav.Name = "btnSavrav";
             this.btnSavrav.Size = new System.Drawing.Size(120, 54);
             this.btnSavrav.TabIndex = 1;
             this.btnSavrav.UseVisualStyleBackColor = false;
             this.btnSavrav.Click += new System.EventHandler(this.btnSavrav_Click);
+            this.btnSavrav.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnSavrav_MouseDown);
+            this.btnSavrav.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnSavrav_MouseUp);
             // 
             // btnKhan
             // 
             this.btnKhan.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnKhan.FlatAppearance.BorderSize = 0;
             this.btnKhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKhan.Location = new System.Drawing.Point(287, 354);
+            this.btnKhan.Location = new System.Drawing.Point(273, 276);
             this.btnKhan.Name = "btnKhan";
             this.btnKhan.Size = new System.Drawing.Size(120, 54);
             this.btnKhan.TabIndex = 2;
             this.btnKhan.UseVisualStyleBackColor = false;
             this.btnKhan.Click += new System.EventHandler(this.btnKhan_Click);
+            this.btnKhan.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnKhan_MouseDown);
+            this.btnKhan.MouseUp += new System.Windows.Forms.MouseEventHandler(this.btnKhan_MouseUp);
             // 
             // Sachin
             // 
-            this.Sachin.Location = new System.Drawing.Point(64, 168);
+            this.Sachin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Sachin.Location = new System.Drawing.Point(50, 90);
             this.Sachin.Name = "Sachin";
             this.Sachin.Size = new System.Drawing.Size(52, 18);
             this.Sachin.TabIndex = 3;
@@ -88,7 +97,8 @@ namespace VotingMechineApp
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(69, 274);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(55, 196);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(52, 18);
             this.label1.TabIndex = 4;
@@ -96,7 +106,8 @@ namespace VotingMechineApp
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(69, 380);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(55, 302);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(45, 18);
             this.label2.TabIndex = 5;
@@ -107,7 +118,7 @@ namespace VotingMechineApp
             this.btnSachinSelect.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnSachinSelect.FlatAppearance.BorderSize = 0;
             this.btnSachinSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSachinSelect.Location = new System.Drawing.Point(228, 160);
+            this.btnSachinSelect.Location = new System.Drawing.Point(214, 82);
             this.btnSachinSelect.Name = "btnSachinSelect";
             this.btnSachinSelect.Size = new System.Drawing.Size(26, 28);
             this.btnSachinSelect.TabIndex = 6;
@@ -118,7 +129,7 @@ namespace VotingMechineApp
             this.btnSavravSelect.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnSavravSelect.FlatAppearance.BorderSize = 0;
             this.btnSavravSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSavravSelect.Location = new System.Drawing.Point(228, 264);
+            this.btnSavravSelect.Location = new System.Drawing.Point(214, 186);
             this.btnSavravSelect.Name = "btnSavravSelect";
             this.btnSavravSelect.Size = new System.Drawing.Size(26, 28);
             this.btnSavravSelect.TabIndex = 7;
@@ -129,7 +140,7 @@ namespace VotingMechineApp
             this.btnKhanSelect.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnKhanSelect.FlatAppearance.BorderSize = 0;
             this.btnKhanSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKhanSelect.Location = new System.Drawing.Point(228, 370);
+            this.btnKhanSelect.Location = new System.Drawing.Point(214, 292);
             this.btnKhanSelect.Name = "btnKhanSelect";
             this.btnKhanSelect.Size = new System.Drawing.Size(26, 28);
             this.btnKhanSelect.TabIndex = 8;
@@ -154,26 +165,39 @@ namespace VotingMechineApp
             this.label3.TabIndex = 10;
             this.label3.Text = "Ready";
             // 
+            // panelBox
+            // 
+            this.panelBox.Controls.Add(this.btnSavrav);
+            this.panelBox.Controls.Add(this.butnSachin);
+            this.panelBox.Controls.Add(this.btnKhan);
+            this.panelBox.Controls.Add(this.btnKhanSelect);
+            this.panelBox.Controls.Add(this.Sachin);
+            this.panelBox.Controls.Add(this.btnSavravSelect);
+            this.panelBox.Controls.Add(this.label1);
+            this.panelBox.Controls.Add(this.btnSachinSelect);
+            this.panelBox.Controls.Add(this.label2);
+            this.panelBox.Location = new System.Drawing.Point(12, 102);
+            this.panelBox.Name = "panelBox";
+            this.panelBox.Size = new System.Drawing.Size(442, 405);
+            this.panelBox.TabIndex = 11;
+            this.panelBox.MouseLeave += new System.EventHandler(this.panelBox_MouseLeave);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(481, 529);
+            this.ClientSize = new System.Drawing.Size(480, 529);
+            this.Controls.Add(this.panelBox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnReady);
-            this.Controls.Add(this.btnKhanSelect);
-            this.Controls.Add(this.btnSavravSelect);
-            this.Controls.Add(this.btnSachinSelect);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.Sachin);
-            this.Controls.Add(this.btnKhan);
-            this.Controls.Add(this.btnSavrav);
-            this.Controls.Add(this.butnSachin);
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vote";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.Click += new System.EventHandler(this.Form1_Click);
+            this.MouseLeave += new System.EventHandler(this.Form1_MouseLeave);
+            this.panelBox.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -191,6 +215,7 @@ namespace VotingMechineApp
         private System.Windows.Forms.Button btnKhanSelect;
         private System.Windows.Forms.Button btnReady;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panelBox;
     }
 }
 

@@ -35,8 +35,8 @@ namespace VotingMechineApp
         {
             btnVoterReady.Region=Region.FromHrgn(CreateRoundRectRgn(0, 0, btnVoterReady.Width, btnVoterReady.Height, 60, 60));
             btnStop.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnStop.Width, btnStop.Height, 60, 60));
-            btnVotereadySelection.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnVotereadySelection.Width, btnVotereadySelection.Height, 60, 60));
-            btnStopSelection.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnStopSelection.Width, btnStopSelection.Height, 60, 60));
+            btnVotereadySelection.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnVotereadySelection.Width, btnVotereadySelection.Height, 30, 30));
+            btnStopSelection.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnStopSelection.Width, btnStopSelection.Height, 30, 30));
             btnFinish.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnFinish.Width, btnFinish.Height, 60, 60));
         }
 
@@ -64,24 +64,46 @@ namespace VotingMechineApp
             connect.Close();
             btnVotereadySelection.BackColor = Color.Green;
             btnStopSelection.BackColor = Color.White;
-            
+
+            Form1 form = new Form1();
+            form.showUser = btnVoterReady.Text;
+           
 
 
         }
 
         private void btnFinish_Click(object sender, EventArgs e)
         {
+            DialogResult dialogResult = MessageBox.Show("Are you sure Finish Election", "Voting", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                SqlConnection connect = new SqlConnection(Connection);
+                connect.Open();
+                SqlCommand command = new SqlCommand("UpdateVoteState", connect);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("VotingState", btnFinish.Text);
+                command.ExecuteNonQuery();
+                connect.Close();
+                btnVotereadySelection.BackColor = Color.White;
+                btnStopSelection.BackColor = Color.White;
+                Result result = new Result();
+                result.Show();
+            }
+            
+           
+        }
+        string state = "Stop";
+        private void PresidingOfficer_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            
             SqlConnection connect = new SqlConnection(Connection);
             connect.Open();
             SqlCommand command = new SqlCommand("UpdateVoteState", connect);
             command.CommandType = CommandType.StoredProcedure;
-            command.Parameters.AddWithValue("VotingState", btnFinish.Text);
+            
+            command.Parameters.AddWithValue("VotingState", state);
             command.ExecuteNonQuery();
             connect.Close();
-            btnVotereadySelection.BackColor = Color.White;
-            btnStopSelection.BackColor = Color.White;
-            Result result =new Result();
-            result.Show();
         }
     }
 }
