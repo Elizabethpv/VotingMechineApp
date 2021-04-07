@@ -29,6 +29,7 @@ namespace VotingMechineApp
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.butnSachin = new System.Windows.Forms.Button();
             this.btnSavrav = new System.Windows.Forms.Button();
             this.btnKhan = new System.Windows.Forms.Button();
@@ -41,7 +42,13 @@ namespace VotingMechineApp
             this.btnReady = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.panelBox = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.panelBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // butnSachin
@@ -49,7 +56,7 @@ namespace VotingMechineApp
             this.butnSachin.BackColor = System.Drawing.Color.RoyalBlue;
             this.butnSachin.FlatAppearance.BorderSize = 0;
             this.butnSachin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.butnSachin.Location = new System.Drawing.Point(163, 7);
+            this.butnSachin.Location = new System.Drawing.Point(216, 12);
             this.butnSachin.Name = "butnSachin";
             this.butnSachin.Size = new System.Drawing.Size(120, 54);
             this.butnSachin.TabIndex = 0;
@@ -63,7 +70,7 @@ namespace VotingMechineApp
             this.btnSavrav.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnSavrav.FlatAppearance.BorderSize = 0;
             this.btnSavrav.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSavrav.Location = new System.Drawing.Point(163, 108);
+            this.btnSavrav.Location = new System.Drawing.Point(216, 113);
             this.btnSavrav.Name = "btnSavrav";
             this.btnSavrav.Size = new System.Drawing.Size(120, 54);
             this.btnSavrav.TabIndex = 1;
@@ -77,7 +84,7 @@ namespace VotingMechineApp
             this.btnKhan.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnKhan.FlatAppearance.BorderSize = 0;
             this.btnKhan.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKhan.Location = new System.Drawing.Point(163, 209);
+            this.btnKhan.Location = new System.Drawing.Point(216, 214);
             this.btnKhan.Name = "btnKhan";
             this.btnKhan.Size = new System.Drawing.Size(120, 54);
             this.btnKhan.TabIndex = 2;
@@ -118,7 +125,7 @@ namespace VotingMechineApp
             this.btnSachinSelect.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnSachinSelect.FlatAppearance.BorderSize = 0;
             this.btnSachinSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSachinSelect.Location = new System.Drawing.Point(104, 15);
+            this.btnSachinSelect.Location = new System.Drawing.Point(157, 20);
             this.btnSachinSelect.Name = "btnSachinSelect";
             this.btnSachinSelect.Size = new System.Drawing.Size(26, 28);
             this.btnSachinSelect.TabIndex = 6;
@@ -129,7 +136,7 @@ namespace VotingMechineApp
             this.btnSavravSelect.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnSavravSelect.FlatAppearance.BorderSize = 0;
             this.btnSavravSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSavravSelect.Location = new System.Drawing.Point(104, 119);
+            this.btnSavravSelect.Location = new System.Drawing.Point(157, 124);
             this.btnSavravSelect.Name = "btnSavravSelect";
             this.btnSavravSelect.Size = new System.Drawing.Size(26, 28);
             this.btnSavravSelect.TabIndex = 7;
@@ -140,7 +147,7 @@ namespace VotingMechineApp
             this.btnKhanSelect.BackColor = System.Drawing.Color.RoyalBlue;
             this.btnKhanSelect.FlatAppearance.BorderSize = 0;
             this.btnKhanSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnKhanSelect.Location = new System.Drawing.Point(104, 225);
+            this.btnKhanSelect.Location = new System.Drawing.Point(157, 230);
             this.btnKhanSelect.Name = "btnKhanSelect";
             this.btnKhanSelect.Size = new System.Drawing.Size(26, 28);
             this.btnKhanSelect.TabIndex = 8;
@@ -168,6 +175,9 @@ namespace VotingMechineApp
             // panelBox
             // 
             this.panelBox.BackColor = System.Drawing.Color.Transparent;
+            this.panelBox.Controls.Add(this.pictureBox3);
+            this.panelBox.Controls.Add(this.pictureBox1);
+            this.panelBox.Controls.Add(this.pictureBox2);
             this.panelBox.Controls.Add(this.btnSavrav);
             this.panelBox.Controls.Add(this.butnSachin);
             this.panelBox.Controls.Add(this.btnKhan);
@@ -177,11 +187,44 @@ namespace VotingMechineApp
             this.panelBox.Controls.Add(this.label2);
             this.panelBox.Controls.Add(this.btnSavravSelect);
             this.panelBox.Controls.Add(this.btnSachinSelect);
-            this.panelBox.Location = new System.Drawing.Point(78, 129);
+            this.panelBox.Location = new System.Drawing.Point(36, 129);
             this.panelBox.Name = "panelBox";
-            this.panelBox.Size = new System.Drawing.Size(297, 276);
+            this.panelBox.Size = new System.Drawing.Size(339, 276);
             this.panelBox.TabIndex = 11;
             this.panelBox.MouseLeave += new System.EventHandler(this.panelBox_MouseLeave);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(63, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(69, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(66, 214);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(52, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 12;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(66, 113);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(48, 50);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 13;
+            this.pictureBox3.TabStop = false;
             // 
             // Form1
             // 
@@ -199,6 +242,9 @@ namespace VotingMechineApp
             this.Click += new System.EventHandler(this.Form1_Click);
             this.MouseLeave += new System.EventHandler(this.Form1_MouseLeave);
             this.panelBox.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -217,6 +263,9 @@ namespace VotingMechineApp
         private System.Windows.Forms.Button btnReady;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panelBox;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 
