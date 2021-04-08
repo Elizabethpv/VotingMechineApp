@@ -29,12 +29,14 @@ namespace VotingMechineApp
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnVoterReady = new System.Windows.Forms.Button();
             this.btnStop = new System.Windows.Forms.Button();
             this.btnFinish = new System.Windows.Forms.Button();
             this.btnVotereadySelection = new System.Windows.Forms.Button();
             this.btnStopSelection = new System.Windows.Forms.Button();
             this.panel = new System.Windows.Forms.Panel();
+            this.tmrPresiding = new System.Windows.Forms.Timer(this.components);
             this.panel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,7 +87,7 @@ namespace VotingMechineApp
             // 
             // btnVotereadySelection
             // 
-            this.btnVotereadySelection.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnVotereadySelection.BackColor = System.Drawing.Color.White;
             this.btnVotereadySelection.FlatAppearance.BorderSize = 0;
             this.btnVotereadySelection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnVotereadySelection.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -98,7 +100,7 @@ namespace VotingMechineApp
             // 
             // btnStopSelection
             // 
-            this.btnStopSelection.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnStopSelection.BackColor = System.Drawing.Color.White;
             this.btnStopSelection.FlatAppearance.BorderSize = 0;
             this.btnStopSelection.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnStopSelection.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -120,6 +122,10 @@ namespace VotingMechineApp
             this.panel.Name = "panel";
             this.panel.Size = new System.Drawing.Size(340, 410);
             this.panel.TabIndex = 5;
+            // 
+            // tmrPresiding
+            // 
+            this.tmrPresiding.Tick += new System.EventHandler(this.tmrPresiding_Tick);
             // 
             // PresidingOfficer
             // 
@@ -145,5 +151,6 @@ namespace VotingMechineApp
         private System.Windows.Forms.Button btnVotereadySelection;
         private System.Windows.Forms.Button btnStopSelection;
         private System.Windows.Forms.Panel panel;
+        private System.Windows.Forms.Timer tmrPresiding;
     }
 }

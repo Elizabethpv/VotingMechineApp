@@ -60,8 +60,8 @@ namespace VotingMechineApp
                 }
 
             }
-            
 
+            tmrVoting.Enabled = true;
         }
 
 
@@ -79,7 +79,7 @@ namespace VotingMechineApp
             btnKhanSelect.BackColor = Color.RoyalBlue;
             btnReady.BackColor = Color.Red;
             butnSachin.BackColor = Color.Black;
-
+            panelBox.Enabled = false;
         }
 
         private void btnSavrav_Click(object sender, EventArgs e)
@@ -96,6 +96,7 @@ namespace VotingMechineApp
             btnKhanSelect.BackColor = Color.RoyalBlue;
             btnReady.BackColor = Color.Red;
             btnSavrav.BackColor = Color.Black;
+            panelBox.Enabled = false;
         }
 
         private void btnKhan_Click(object sender, EventArgs e)
@@ -112,6 +113,7 @@ namespace VotingMechineApp
             btnSachinSelect.BackColor = Color.RoyalBlue;
             btnReady.BackColor = Color.Red;
             btnKhan.BackColor = Color.Black;
+            panelBox.Enabled = false;
         }
 
         public string showUser { get; set; }
@@ -173,6 +175,11 @@ namespace VotingMechineApp
         }
 
         private void Form1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void tmrVoting_Tick(object sender, EventArgs e)
         {
             SqlConnection connect = new SqlConnection(Connection);
             connect.Open();

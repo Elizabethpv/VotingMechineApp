@@ -38,6 +38,8 @@ namespace VotingMechineApp
             btnVotereadySelection.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnVotereadySelection.Width, btnVotereadySelection.Height, 30, 30));
             btnStopSelection.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnStopSelection.Width, btnStopSelection.Height, 30, 30));
             btnFinish.Region = Region.FromHrgn(CreateRoundRectRgn(0, 0, btnFinish.Width, btnFinish.Height, 60, 60));
+
+            tmrPresiding.Enabled = true;
         }
 
         private void btnStop_Click(object sender, EventArgs e)
@@ -104,6 +106,28 @@ namespace VotingMechineApp
             command.Parameters.AddWithValue("VotingState", state);
             command.ExecuteNonQuery();
             connect.Close();
+        }
+
+        private void tmrPresiding_Tick(object sender, EventArgs e)
+        {
+            SqlConnection connect = new SqlConnection(Connection);
+            connect.Open();
+            SqlCommand cmd = new SqlCommand("VotingMechineSystem", connect);
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            String status;
+            if (ds.Tables[0].Rows.Count > 0)
+            {
+                status = ds.Tables[0].Rows[0]["VotingState"].ToString();
+
+                if (status == "TempStop")
+                {
+                    btnVotereadySelection.BackColor = Color.White;
+
+                }
+
+            }
         }
     }
 }
