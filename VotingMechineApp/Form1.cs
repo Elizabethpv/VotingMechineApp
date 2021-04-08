@@ -80,6 +80,7 @@ namespace VotingMechineApp
             btnReady.BackColor = Color.Red;
             butnSachin.BackColor = Color.Black;
             panelBox.Enabled = false;
+            btnReady.BackColor = Color.White;
         }
 
         private void btnSavrav_Click(object sender, EventArgs e)
@@ -97,6 +98,7 @@ namespace VotingMechineApp
             btnReady.BackColor = Color.Red;
             btnSavrav.BackColor = Color.Black;
             panelBox.Enabled = false;
+           
         }
 
         private void btnKhan_Click(object sender, EventArgs e)
@@ -114,6 +116,7 @@ namespace VotingMechineApp
             btnReady.BackColor = Color.Red;
             btnKhan.BackColor = Color.Black;
             panelBox.Enabled = false;
+            
         }
 
         public string showUser { get; set; }
@@ -126,6 +129,7 @@ namespace VotingMechineApp
             btnKhan.BackColor = Color.RoyalBlue;
             butnSachin.BackColor = Color.RoyalBlue;
             btnSavrav.BackColor = Color.RoyalBlue;
+            btnReady.BackColor = Color.White;
         }
 
         private void panelBox_MouseLeave(object sender, EventArgs e)
@@ -163,7 +167,8 @@ namespace VotingMechineApp
         }
 
         private void butnSachin_MouseUp(object sender, MouseEventArgs e)
-        {        
+        {
+            
         }
 
         private void btnSavrav_MouseUp(object sender, MouseEventArgs e)
@@ -200,7 +205,7 @@ namespace VotingMechineApp
                 }
                 if (status == "Stop")
                 {
-                    btnReady.BackColor = Color.Red;
+                    btnReady.BackColor = Color.White;
                     panelBox.Enabled = false;
 
                 }
